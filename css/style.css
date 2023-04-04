@@ -1,0 +1,320 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400;500;600;700&display=swap");
+@import url("https://webfontworld.github.io/score/SCoreDream.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F3EFE0;
+  transition: 0.3s;
+}
+body.dark {
+  background-color: #434242;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img, svg {
+  width: 100%;
+  height: 100%;
+}
+
+#wrapper {
+  width: 100%;
+  height: 100vh;
+  padding: 0 72px;
+  position: relative;
+  overflow: hidden;
+}
+
+.loading-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  background-color: #F3EFE0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 3s;
+}
+.loading-page.off {
+  opacity: 0;
+  z-index: -1;
+}
+.loading-page .loading-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 20px 28px;
+  border: 2px solid #525E75;
+  border-radius: 25px;
+  box-shadow: 6px 6px 0px 2px #525E75;
+  text-transform: uppercase;
+  font-family: "Black Han Sans", sans-serif;
+  font-size: 1.75rem;
+  color: #525E75;
+  animation: loading-btn 0.3s linear;
+}
+
+@keyframes loading-btn {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(8px, 4px);
+    box-shadow: none;
+  }
+  100% {
+    transform: translate(0);
+    box-shadow: 6px 6px 0px 2px #525E75;
+  }
+}
+.header-wrap {
+  width: 100%;
+  height: 100px;
+  padding: 50px 0 0 0;
+  position: relative;
+  z-index: 9999;
+  color: #525E75;
+  font-size: 2.25rem;
+  font-family: "Black Han Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.header-wrap.hd-dark {
+  color: #F3EFE0;
+}
+.header-wrap .color-mode-btn .dark-mode-btn {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  padding: 12px;
+  border: 2px solid #525E75;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-wrap .color-mode-btn .dark-mode-btn.off {
+  display: none;
+}
+.header-wrap .color-mode-btn .light-mode-btn {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  padding: 12px;
+  border: 2px solid #F3EFE0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: -1;
+}
+.header-wrap .color-mode-btn .light-mode-btn.on {
+  opacity: 1;
+  z-index: 9;
+}
+
+.section-main {
+  height: auto;
+}
+
+.main-page-txt-wrap {
+  width: 80%;
+  height: 320px;
+  line-height: 1;
+  font-family: "Black Han Sans", sans-serif;
+  font-size: 7rem;
+  margin-top: 100px;
+  position: relative;
+  color: #525E75;
+}
+.main-page-txt-wrap.main-wrap-dark {
+  color: #F3EFE0;
+}
+.main-page-txt-wrap ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+}
+.main-page-txt-wrap .main-page-txt {
+  color: #F3EFE0;
+  -webkit-text-stroke: 2px #525E75;
+}
+.main-page-txt-wrap .main-page-txt.main-txt-dark {
+  color: #434242;
+  -webkit-text-stroke: 2px #F3EFE0;
+}
+.main-page-txt-wrap .main-page-txt-container {
+  height: 70px;
+  overflow: hidden;
+  outline: 2px transparent;
+}
+
+.main-page-btn-wrap {
+  width: 100%;
+  height: 100%;
+  margin-top: 120px;
+  margin-bottom: 40px;
+  color: #525E75;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.main-page-btn-wrap.main-btn-dark {
+  color: #F3EFE0;
+}
+.main-page-btn-wrap div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: "Black Han Sans", sans-serif;
+  font-size: 1.75rem;
+  width: 260px;
+  height: 100%;
+  padding: 20px;
+  margin-bottom: 24px;
+  background-color: #F3EFE0;
+  border: 2px solid #525E75;
+  border-radius: 30px;
+  box-shadow: 8px 4px 0px 1px #525E75;
+  transition: 0.1s;
+}
+.main-page-btn-wrap div.main-div-dark {
+  background-color: #434242;
+  border: 2px solid #F3EFE0;
+  box-shadow: 8px 4px 0px 1px #F3EFE0;
+}
+.main-page-btn-wrap div:hover {
+  transform: translate(8px, 4px);
+  box-shadow: none;
+}
+.main-page-btn-wrap div:last-child {
+  margin-bottom: 0;
+}
+
+.contact-pop-up-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 34, 34, 0.6);
+}
+.contact-pop-up-bg.on {
+  opacity: 1;
+  z-index: 9999;
+}
+.contact-pop-up-bg .contact-pop-up {
+  background-color: #F3EFE0;
+  color: #525E75;
+  border: 2px solid #525E75;
+  border-radius: 60px;
+  padding: 120px;
+  padding-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.contact-pop-up-bg .contact-pop-up.contact-dark {
+  background-color: #434242;
+  color: #F3EFE0;
+  border: 2px solid #F3EFE0;
+}
+.contact-pop-up-bg .contact-pop-up .title-txt {
+  text-transform: uppercase;
+  font-family: "Black Han Sans", sans-serif;
+  margin-bottom: 60px;
+}
+.contact-pop-up-bg .contact-pop-up .title-txt h1 {
+  color: #BB6464;
+  font-size: 5rem;
+  animation: text 1.5s infinite cubic-bezier(0.4, 0, 1, 1);
+}
+@keyframes text {
+  20% {
+    transform: scaleY(1.4) skew(10deg);
+  }
+  50% {
+    transform: scaleY(1) skew(0);
+  }
+  70% {
+    transform: scaleY(1.4) skew(-10deg);
+  }
+}
+.contact-pop-up-bg .contact-pop-up .title-txt p {
+  font-size: 1.5rem;
+}
+.contact-pop-up-bg .contact-pop-up .sub-txt h2 {
+  font-family: "Black Han Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+.contact-pop-up-bg .contact-pop-up .sub-txt a, .contact-pop-up-bg .contact-pop-up .sub-txt p {
+  font-size: 2rem;
+  font-family: "Bai Jamjuree", sans-serif;
+  margin-bottom: 40px;
+  display: block;
+}
+.contact-pop-up-bg .contact-pop-up .sub-txt a::after, .contact-pop-up-bg .contact-pop-up .sub-txt p::after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #BB6464;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+.contact-pop-up-bg .contact-pop-up .sub-txt a:hover::after, .contact-pop-up-bg .contact-pop-up .sub-txt p:hover::after {
+  transform: scaleX(0.8);
+}
+.contact-pop-up-bg .contact-pop-up .close-btn {
+  width: 100%;
+  height: 100%;
+}
+.contact-pop-up-bg .contact-pop-up .close-btn::after {
+  cursor: pointer;
+  content: "×";
+  font-size: 72px;
+  font-weight: 200;
+  color: #BB6464;
+}/*# sourceMappingURL=style.css.map */
